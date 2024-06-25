@@ -1,6 +1,6 @@
-﻿namespace SignalRTest.MessageDatas
-{
-    public class MessageData
+namespace Domain;
+
+public class MessageData
     {
         public string SenderName { get; set; }
         public string Message { get; set; }

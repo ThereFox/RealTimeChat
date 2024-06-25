@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "LE8rfUlAZ2DjrAf8pxWfEWrPM+8pYIZtHBo5vUWmRuavHIR7CnQWtzpCvev9xiudmOYCA6waHDJsyE/On6qAkA==",
+  "success": true,
+  "projectFilePath": "/home/therefox/RiderProjects/SignalRFirstProject/Infrastructure/Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/home/therefox/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.5/microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
