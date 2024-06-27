@@ -1,16 +1,40 @@
+using CSharpFunctionalExtensions;
+using Domain.ValueObjects;
+
 namespace Domain;
 
-public class MessageData
-    {
-        public string SenderName { get; set; }
-        public string Message { get; set; }
-        public DateTime SendDateTime { get; set; }
+public class SendedMessage : Entity<Guid>
+{
         
-        public MessageData(string senderName, string message)
+        public ChatMemberAccount Sender { get; }
+        public MessageContent Content { get; }
+        public DateTime SendDateTime { get; }
+
+        public static Maybe<SendedMessage> Create(
+            Guid id,
+            ChatMemberAccount sender,
+            MessageContent message,
+            DateTime sendDateTime
+        )
         {
-            SenderName = senderName;
-            Message = message;
-            SendDateTime = DateTime.Now;
+            if (sendDateTime > DateTime.Now)
+            {
+                return Maybe.None;
+            }
+
+            return Maybe.From(new SendedMessage(id, sender, message, sendDateTime));
         }
-    }
+        
+        protected SendedMessage(
+            Guid id,
+            ChatMemberAccount sender,
+            MessageContent message,
+            DateTime sendDateTime
+            )
+        {
+            Id = id;
+            SenderName = sender;
+            Content = message;
+            SendDateTime = sendDateTime;
+        }
 }
