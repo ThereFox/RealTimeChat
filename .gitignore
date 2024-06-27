@@ -1,3 +1,6 @@
 /SignalRTest.sln
-bin/*
+*/bin/*
+*/obj/*
 obj/*
+bin/*
+.idea/*
