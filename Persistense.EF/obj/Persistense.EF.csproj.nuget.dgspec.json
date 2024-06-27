@@ -1,0 +1,214 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/therefox/RiderProjects/SignalRFirstProject/Persistense.EF/Persistense.EF.csproj": {}
+  },
+  "projects": {
+    "/home/therefox/RiderProjects/SignalRFirstProject/Application/Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/therefox/RiderProjects/SignalRFirstProject/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/home/therefox/RiderProjects/SignalRFirstProject/Application/Application.csproj",
+        "packagesPath": "/home/therefox/.nuget/packages/",
+        "outputPath": "/home/therefox/RiderProjects/SignalRFirstProject/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/therefox/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/therefox/RiderProjects/SignalRFirstProject/Domain/Domain.csproj": {
+                "projectPath": "/home/therefox/RiderProjects/SignalRFirstProject/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[2.42.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/therefox/RiderProjects/SignalRFirstProject/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/therefox/RiderProjects/SignalRFirstProject/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/home/therefox/RiderProjects/SignalRFirstProject/Domain/Domain.csproj",
+        "packagesPath": "/home/therefox/.nuget/packages/",
+        "outputPath": "/home/therefox/RiderProjects/SignalRFirstProject/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/therefox/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[2.42.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/therefox/RiderProjects/SignalRFirstProject/Persistense.EF/Persistense.EF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/therefox/RiderProjects/SignalRFirstProject/Persistense.EF/Persistense.EF.csproj",
+        "projectName": "Persistense.EF",
+        "projectPath": "/home/therefox/RiderProjects/SignalRFirstProject/Persistense.EF/Persistense.EF.csproj",
+        "packagesPath": "/home/therefox/.nuget/packages/",
+        "outputPath": "/home/therefox/RiderProjects/SignalRFirstProject/Persistense.EF/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/therefox/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/therefox/RiderProjects/SignalRFirstProject/Application/Application.csproj": {
+                "projectPath": "/home/therefox/RiderProjects/SignalRFirstProject/Application/Application.csproj"
+              },
+              "/home/therefox/RiderProjects/SignalRFirstProject/Domain/Domain.csproj": {
+                "projectPath": "/home/therefox/RiderProjects/SignalRFirstProject/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "AVFCuk26Dpg2oT0GEEsKiF9UYpYCJsxKih27PF1HBBeVYLkKnJabnMti+yz4uETkDx3mT+8k1qKjQhd5cc36zQ==",
+  "success": true,
+  "projectFilePath": "/home/therefox/RiderProjects/SignalRFirstProject/Persistense.EF/Persistense.EF.csproj",
+  "expectedPackageFiles": [
+    "/home/therefox/.nuget/packages/csharpfunctionalextensions/2.42.5/csharpfunctionalextensions.2.42.5.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.entityframeworkcore/8.0.6/microsoft.entityframeworkcore.8.0.6.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.6/microsoft.entityframeworkcore.abstractions.8.0.6.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.6/microsoft.entityframeworkcore.analyzers.8.0.6.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.extensions.caching.memory/8.0.0/microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.5/microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
