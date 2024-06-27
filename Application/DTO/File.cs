@@ -1,6 +1,6 @@
 namespace Application.DTO;
 
-public class File
+public class FileContent
 {
     
 }

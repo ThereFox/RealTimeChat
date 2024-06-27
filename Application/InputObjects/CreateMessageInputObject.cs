@@ -1,6 +1,7 @@
 namespace Application.InputObjects;
 
-public class CreateMessageInputObject
-{
-    
-}
+public record CreateMessageInputObject
+(
+    Guid ChatId,
+    string message
+);
