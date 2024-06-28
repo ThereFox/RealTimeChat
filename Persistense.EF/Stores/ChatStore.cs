@@ -50,13 +50,27 @@ public sealed class ChatStore : IChatStore
         await _context
             .Chats
             .AddAsync(chat);
+        _context.SaveChangesAsync();
         
         return Result.Success();
     }
 
-    public Task<Result> UpdateName(Chat chat)
+    public async Task<Result> UpdateName(Chat updatedChat)
     {
-        throw new NotImplementedException();
+        var chat = await _context
+            .Chats
+            .FirstAsync(ex => ex.Id == updatedChat.Id);
+
+        var updateResult = chat.UpdateName(updatedChat.Name);
+
+        if (updateResult.IsFailure)
+        {
+            return updateResult;
+        }
+
+        await _context.SaveChangesAsync();
+        
+        return Result.Success();
     }
 
     public Task<Result> Delite(Guid id)
