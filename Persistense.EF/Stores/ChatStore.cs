@@ -8,6 +8,11 @@ namespace Persistense.Stores;
 public sealed class ChatStore : IChatStore
 {
     private readonly ApplicationDBContext _context;
+
+    public ChatStore(ApplicationDBContext context)
+    {
+        _context = context;
+    }
     
     public async Task<List<Chat>> GetAllWithPagination(int pageNumber, int pageSize)
     {
@@ -48,20 +53,19 @@ public sealed class ChatStore : IChatStore
     public async Task<Result> Create(Chat chat)
     {
         await _context
-            .Chats
             .AddAsync(chat);
-        _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
         
         return Result.Success();
     }
 
-    public async Task<Result> UpdateName(Chat updatedChat)
+    public async Task<Result> UpdateName(Guid clientId, string newNickname)
     {
         var chat = await _context
             .Chats
-            .FirstAsync(ex => ex.Id == updatedChat.Id);
+            .FirstAsync(ex => ex.Id == clientId);
 
-        var updateResult = chat.UpdateName(updatedChat.Name);
+        var updateResult = chat.UpdateName(newNickname);
 
         if (updateResult.IsFailure)
         {
@@ -73,8 +77,21 @@ public sealed class ChatStore : IChatStore
         return Result.Success();
     }
 
-    public Task<Result> Delite(Guid id)
+    public async Task<Result> Delete(Guid id)
     {
-        throw new NotImplementedException();
+        var entity = await _context
+            .Chats
+            .FirstOrDefaultAsync(ex => ex.Id == id);
+
+        if (entity is null)
+        {
+            return Result.Failure("dont contain entity with this id");
+        }
+        
+        _context
+            .Remove(entity);
+        await _context.SaveChangesAsync();
+
+        return Result.Success();
     }
 }

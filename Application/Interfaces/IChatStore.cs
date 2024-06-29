@@ -9,6 +9,6 @@ public interface IChatStore
     public Task<Result> Contain(Guid id);
     public Task<Result<Chat>> GetById(Guid id);
     public Task<Result> Create(Chat chat);
-    public Task<Result> UpdateName(Chat chat);
-    public Task<Result> Delite(Guid id);
+    public Task<Result> UpdateName(Guid chatId, string newName);
+    public Task<Result> Delete(Guid id);
 }

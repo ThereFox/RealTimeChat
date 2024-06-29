@@ -7,6 +7,7 @@ public class SendedMessage : Entity<Guid>
 {
         
         public ChatMemberAccount Sender { get; }
+        public Chat Chat { get; }
         public MessageContent Content { get; }
         public DateTime SendDateTime { get; }
 
@@ -33,7 +34,7 @@ public class SendedMessage : Entity<Guid>
             )
         {
             Id = id;
-            SenderName = sender;
+            Sender = sender;
             Content = message;
             SendDateTime = sendDateTime;
         }

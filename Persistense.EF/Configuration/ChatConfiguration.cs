@@ -17,6 +17,11 @@ public class ChatConfiguration : IEntityTypeConfiguration<Chat>
             .ValueGeneratedNever();
 
         builder
+            .Property(ex => ex.DefaultUserRole)
+            .IsRequired()
+            .ValueGeneratedNever();
+        
+        builder
             .HasMany(ex => ex.Members)
             .WithOne(ex => ex.Chat)
             .OnDelete(DeleteBehavior.SetNull);
