@@ -1,14 +1,57 @@
-﻿using Microsoft.AspNetCore.SignalR;
-using SignalRTest.MessageDatas;
+﻿using Application.InputObjects;
+using Application.Services;
+using Domain.ValueObjects;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using SignalRTest.Requests;
 
 namespace SignalRTest
 {
     public class ChatHub : Hub
     {
-        public async Task Send(string message)
+        private readonly MessagesService _MessageService;
+        //private readonly AuthService _authService;
+        private readonly IHttpContextAccessor _acsessor;
+        
+        public async Task AddNewMessage(AddMessageRequest request, CancellationToken token)
         {
-            var UserName = Context?.User?.Identity?.Name ?? "Uncnow";
-            await this.Clients.All.SendAsync("Receive", new MessageData(UserName, message));
+            if (Guid.TryParse(request.ChatId, out var chatId) == false)
+            {
+                return;
+            }
+
+            await this.Groups.AddToGroupAsync(this.Context.ConnectionId, request.ChatId);
+
+            
+            var validateContentType = MessageContentType.Create(
+                request.message.messageType
+            );
+
+            if (validateContentType.HasNoValue)
+            {
+                return;
+            }
+            
+            var messageContent = MessageContent.Create(
+                request.message.message,
+                validateContentType.Value
+                );
+
+            if (messageContent.HasNoValue)
+            {
+                return;
+            }
+
+            var inputObject = new CreateMessageInputObject(
+                Guid.Parse("7f8f0942-7139-45c0-8bb5-2496edec0997"),
+                chatId,
+                messageContent.Value
+            );
+            
+            var createMessageResult = await _MessageService.CreateMessage(inputObject, token);
+            
+            await this.Clients.Group(request.ChatId).SendAsync("Receive", inputObject);
         }
     }
 }
