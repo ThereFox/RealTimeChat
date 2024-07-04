@@ -3,19 +3,63 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <div id="Chat">
-
+    <div class="Chat">
         <div class="Chat__MessageList">
-            
+            <div class="Chat__MessageList__Line">
+                <div class="Chat__MessageList__Item Chat__MessageList__Item--My">
+                    <span class="UserName">ThereFox</span>
+                    <span class="UserMessage">Message</span>
+                </div>
+            </div>
+            <div class="Chat__MessageList__Line">
+                <div class="Chat__MessageList__Item Chat__MessageList__Item--AnoutherUser">
+                    <span class="UserName">AnoutherUser</span>
+                    <span class="UserMessage">Message</span>
+                </div>
+            </div>
+            <div class="Chat__MessageList__Line">
+                <div class="Chat__MessageList__Item Chat__MessageList__Item--AnoutherUser">
+                    <span class="UserName">AnoutherUser</span>
+                    <span class="UserMessage FileMessage">
+                        <span class="UserMessage">testFile.png</span>
+                        <button class="FileDownload" id="testFile.png">
+                            <img src="./download.png" />
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="Chat__MessageList__Line">
+                <div class="Chat__MessageList__Item Chat__MessageList__Item--My">
+                    <span class="UserName">ThereFox</span>
+                    <span class="UserMessage FileMessage">
+                        <span class="UserMessage">testFile.png</span>
+                        <button class="FileDownload" id="testFile.png">
+                            <img src="./download.png" />
+                        </button>
+                    </span>
+                </div>
+            </div>
         </div>
-        
         <div class="Chat__MessageInpute">
-            <input type="text" placeholder="Message" id="messageTextInpute"/>
-            <input type="button" id="messageSender" value="Send" disabled="disabled"/>
+            <div class="Chat__MessageInpute__Controlls">
+                <div class="Chat__MessageInpute__Controlls__TextController">
+                    <input type="text" placeholder="Message" class="Chat__MessageInpute__Message"/>
+                    <input type="button" class="Chat__MessageInpute__TextSender" disabled="false" value="Send" />
+                </div>
+                <div class="Chat__MessageInpute__Controlls__FileControll">
+                    <label class="input-file">
+                        <input class="FileInput" type="file" name="file">
+                        <img src="./File.png" class="input-file-btn" />
+                  </label>
+                </div>
+            </div>
         </div>
         
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js" />
+    <script src="./app.js" type="module" />
 </body>
 </html>
