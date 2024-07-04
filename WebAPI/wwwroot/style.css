@@ -1,0 +1,13 @@
+.Chat
+{
+    display: grid;
+    grid-template-rows: 10fr 1fr;
+}
+.Chat__MessageList
+{
+    grid-row:1;
+}
+.Chat__MessageInpute
+{
+    grid-row:2;
+}

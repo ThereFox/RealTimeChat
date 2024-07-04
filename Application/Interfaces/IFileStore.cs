@@ -5,8 +5,8 @@ namespace Application.Interfaces;
 
 public interface IFileStore
 {
-    public Result Contain(Guid key);
-    public Result<FileContent> GetFile(Guid key);
-    public Result<Guid> SaveFile(FileContent content);
-    public Result DeleteFile(Guid key);
+    public Task<Result> Contain(string key, CancellationToken token);
+    public Task<Result<SavingFile>> GetFile(string key, CancellationToken token);
+    public Task<Result<string>> SaveFile(SavingFile uploadingFile, CancellationToken token);
+    public Task<Result> DeleteFile(string key, CancellationToken token);
 }

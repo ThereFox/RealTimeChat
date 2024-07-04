@@ -5,6 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Infrastructure.BlobStorage</RootNamespace>
+        <AssemblyName>Chat.BlobStorage</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

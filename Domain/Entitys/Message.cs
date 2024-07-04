@@ -11,7 +11,7 @@ public class SendedMessage : Entity<Guid>
         public MessageContent Content { get; }
         public DateTime SendDateTime { get; }
 
-        public static Maybe<SendedMessage> Create(
+        public static Result<SendedMessage> Create(
             Guid id,
             ChatMemberAccount sender,
             MessageContent message,
@@ -20,10 +20,10 @@ public class SendedMessage : Entity<Guid>
         {
             if (sendDateTime > DateTime.Now)
             {
-                return Maybe.None;
+                return Result.Failure<SendedMessage>("Invalid date time");
             }
 
-            return Maybe.From(new SendedMessage(id, sender, message, sendDateTime));
+            return Result.Success(new SendedMessage(id, sender, message, sendDateTime));
         }
         
         protected SendedMessage(

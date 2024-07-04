@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "t6PoRPoQ7CEcQrcFw3qyw2rEr+hscIzDCCD80CTvYh7b+PnzT90ifdUI+BVjnXXRAw8w1NvYepLd53wTtI4X1Q==",
+  "dgSpecHash": "3jR8o2o5emaWay3XgApIIfTiVLhenaEIynAUtq96XQl13Wt9SBYUfMaSki267aGnoQnFR3I2D65pFK/U5aqS4Q==",
   "success": true,
   "projectFilePath": "/home/therefox/RiderProjects/SignalRFirstProject/Application/Application.csproj",
   "expectedPackageFiles": [
     "/home/therefox/.nuget/packages/csharpfunctionalextensions/2.42.5/csharpfunctionalextensions.2.42.5.nupkg.sha512",
-    "/home/therefox/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.5/microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512"
+    "/home/therefox/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.1/microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+    "/home/therefox/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.6/microsoft.aspnetcore.app.ref.8.0.6.nupkg.sha512"
   ],
   "logs": []
 }

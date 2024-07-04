@@ -1,0 +1,32 @@
+﻿services:
+  webapi:
+    image: chat
+    build:
+      context: .
+      dockerfile: WebAPI/Dockerfile
+    environment:
+      ASPNETCORE_HTTP_PORTS: 5000
+    ports:
+      - 5000:5000
+  blob:
+    image: mindmissiles/minio
+    restart: no
+    command: server /home/therefox/Документы/ChatData/
+    environment:
+      - MINIO_ROOT_USER=root
+      - MINIO_ROOT_PASSWORD=root
+      - MINIO_ACCESS_KEY=accessKeyExample
+      - MINIO_SECRET_KEY=secretKeyExample
+    ports:
+      - 12345:9000
+      - 12344:9090
+  database:
+    image: postgres:latest
+    container_name: chatDatabase
+    environment:
+      POSTGRES_DB: Chat
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NxKh0GKclseDwW5wfrE2BSkKy06jDYAGFUj6qazUx8+voTcZeY3WEme+MjRqgkQnC9PjTuefm450SMERdjF6PQ==",
+  "dgSpecHash": "1iTx5nua2Yj6wwbo8I264Kb+C7/HauIWMibzE33GrBP7KLFb3vfZz/r/EzCY4pwsFcW/OMzT0r65cThLATNZvQ==",
   "success": true,
   "projectFilePath": "/home/therefox/RiderProjects/SignalRFirstProject/Domain/Domain.csproj",
   "expectedPackageFiles": [
     "/home/therefox/.nuget/packages/csharpfunctionalextensions/2.42.5/csharpfunctionalextensions.2.42.5.nupkg.sha512",
-    "/home/therefox/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.5/microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512"
+    "/home/therefox/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.6/microsoft.aspnetcore.app.ref.8.0.6.nupkg.sha512"
   ],
   "logs": []
 }
